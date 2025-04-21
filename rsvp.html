@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RSVP | Tatiana e Zé Pedro</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdf6f0;
+      color: #333;
+      box-sizing: border-box;
+    }
+
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 2rem;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #8b4d28;
+      font-weight: bold;
+    }
+
+    .left-column {
+      margin-left: 0;
+      margin-right: 50vw;
+      padding: 100px 2rem 80px;
+      background-color: #fff9f5;
+      min-height: calc(100vh - 120px);
+      box-sizing: border-box;
+    }
+
+    .right-column {
+      position: fixed;
+      top: 60px;
+      right: 0;
+      width: 50vw;
+      height: calc(100vh - 60px);
+      background-color: #f0e6df;
+      z-index: 500;
+    }
+
+    .right-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    iframe {
+      width: 100%;
+      height: 480px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .fixed-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      border-top: 1px solid #ddd;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 1rem;
+      color: #8b4d28;
+      z-index: 999;
+    }
+
+    @media screen and (max-width: 768px) {
+      .right-column {
+        display: none;
+      }
+
+      .left-column {
+        margin-right: 0;
+        padding: 80px 1rem 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="top-bar">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="rsvp.html">RSVP</a>
+      <a href="details.html">Details</a>
+    </nav>
+  </header>
+
+  <div class="right-column">
+    <div class="right-image-wrapper">
+      <img src="assets/right-static.jpg" alt="Decorative Image" />
+    </div>
+  </div>
+
+  <div class="left-column">
+    <div class="welcome-text">
+      <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAANLI9OFUMDMxQVQ1SjJHMTFUOEE5M0QyODBaWU5TTS4u&embed=true" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen></iframe>
+    </div>
+  </div>
+
+  <footer class="fixed-footer">
+    <p>With love, Tatiana e Zé Pedro ♥</p>
+  </footer>
+</body>
+</html>
