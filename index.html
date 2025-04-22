@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invitation | Tatiana e Zé Pedro</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdf6f0;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 2rem;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #8b4d28;
+      font-weight: bold;
+    }
+
+    .main-content {
+      flex-grow: 1;
+      padding: 100px 20px 100px;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .image-wrapper {
+      width: 100%;
+      max-width: 650px;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: opacity 1s ease-in-out;
+    }
+
+    #letter {
+      display: none;
+    }
+
+    .show-letter #envelope {
+      display: none;
+    }
+
+    .show-letter #letter {
+      display: block;
+    }
+
+    .invitation-link {
+      display: none;
+      margin-top: 1.5rem;
+    }
+
+    .show-letter + .invitation-link,
+    .show-letter ~ .invitation-link {
+      display: block;
+    }
+
+    .invitation-link a {
+      color: #8b4d28;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .invitation-link a:hover {
+      text-decoration: underline;
+    }
+
+    .fixed-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      border-top: 1px solid #ddd;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 1rem;
+      color: #8b4d28;
+      z-index: 999;
+    }
+
+    @media screen and (max-width: 768px) {
+      .main-content {
+        padding: 80px 10px 120px;
+      }
+
+      nav a {
+        margin-left: 1rem;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="top-bar">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="rsvp.html">RSVP</a>
+      <a href="details.html">Details</a>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <h2>Invitation</h2>
+
+    <div class="image-wrapper" id="imageWrapper" onclick="openEnvelope()">
+      <img src="assets/envelope.jpg" alt="Envelope" id="envelope" />
+      <img src="assets/letter.jpg" alt="Letter" id="letter" />
+    </div>
+
+    <div class="invitation-link" id="pdfLink">
+      <a href="assets/invitation.pdf" target="_blank">Click here to download the invitation PDF</a>
+    </div>
+
+    <p>Click on the envelope to open it and view the invitation!</p>
+  </main>
+
+  <footer class="fixed-footer">
+    <p>With love, Tatiana e Zé Pedro ♥</p>
+  </footer>
+
+  <script>
+    function openEnvelope() {
+      document.getElementById("imageWrapper").classList.add("show-letter");
+      document.getElementById("pdfLink").style.display = "block";
+    }
+  </script>
+</body>
+</html>
